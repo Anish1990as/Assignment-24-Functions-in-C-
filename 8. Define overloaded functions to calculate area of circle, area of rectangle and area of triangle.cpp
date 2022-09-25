@@ -1,19 +1,35 @@
 #include <iostream>
-int add(int, int, int = 0);
 using namespace std;
+float area(int);
+int area(int, int);
+float area(float, float);
 int main()
 {
-    int a, b, c;
-    cout << "enter three numbers" << endl;
-    cin >> a >> b >> c;
-    cout << a << "+" << b << "+" << c << "+ = " << add(a, b, c) << endl;
-    cout << "**************************" << '\n';
-    cout << "enter 2 numbers" << endl;
-    cin >> a >> b;
-    cout << a << "+" << b << "+ = " << add(a, b);
-    return 0;
+    int r, l, w;
+    float b, h;
+    cout << "enter radius of circle = ";
+    cin >> r;
+    cout << "area of circle is " << area(r) << endl;
+    cout << "******************************" << endl;
+    cout << "enter length and width of ractangle" << endl;
+    cin >> l >> w;
+    cout << "area of ractangle is " << area(l, w) << endl;
+    cout << "******************************" << endl;
+    cout << "enter base and height of triangle" << endl;
+    cin >> b >> h;
+    cout << "area of triangle is " << area(b, h);
 }
-int add(int a, int b, int c)
+float area(int a)
 {
-    return a + b + c;
+    return 3.14 * a * a;
+}
+
+int area(int b, int a)
+{
+    return a * b;
+}
+
+float area(float a, float b)
+{
+    return (a * b * 0.5);
 }
